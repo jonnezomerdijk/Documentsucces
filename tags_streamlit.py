@@ -1,5 +1,4 @@
 import pandas as pd
-import regex as re
 import streamlit as st
 import itertools
 import plotly.express as px
