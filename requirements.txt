@@ -1,4 +1,2 @@
 pandas==1.4.2
-itertools
-collections
-streamlit
+streamlit==1.10.0
