@@ -1,0 +1,6 @@
+*.pickle
+countries.pickle
+tagsSQL.pickle
+df.pickle
+test_vkr.p
+test_doc.p
