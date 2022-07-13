@@ -6,24 +6,6 @@ from collections import Counter
 
 countries = pd.read_csv("countries.gzip",compression='gzip')
 tagsSQL = pd.read_csv("tagsSQL.gzip",compression='gzip')
-<<<<<<< HEAD
-import pickle
-from collections import Counter
-
-countries = pd.read_csv("countries.csv")
-tagsSQL = pd.read_csv("tagsSQL.csv")
-=======
-
-import pickle
-from collections import Counter
-
-
-countries = pd.read_csv("countries.gzip",compression='gzip')
-tagsSQL = pd.read_csv("tagsSQL.gzip",compression='gzip')
->>>>>>> 87d481b8b3aa78264b7835593dbd64aa910597b2
-
-countries = pickle.load(open('countries.pickle','rb'))
-tagsSQL = pickle.load(open("tagsSQL.pickle","rb"))
 
 def country_transform(raw):
     global countries
