@@ -1,5 +1,4 @@
 import pandas as pd
-import regex as re
 import streamlit as st
 import itertools
 import plotly.express as px
@@ -7,11 +6,21 @@ from collections import Counter
 
 countries = pd.read_csv("countries.gzip",compression='gzip')
 tagsSQL = pd.read_csv("tagsSQL.gzip",compression='gzip')
+<<<<<<< HEAD
 import pickle
 from collections import Counter
 
 countries = pd.read_csv("countries.csv")
 tagsSQL = pd.read_csv("tagsSQL.csv")
+=======
+
+import pickle
+from collections import Counter
+
+
+countries = pd.read_csv("countries.gzip",compression='gzip')
+tagsSQL = pd.read_csv("tagsSQL.gzip",compression='gzip')
+>>>>>>> 87d481b8b3aa78264b7835593dbd64aa910597b2
 
 countries = pickle.load(open('countries.pickle','rb'))
 tagsSQL = pickle.load(open("tagsSQL.pickle","rb"))
@@ -37,7 +46,6 @@ TOP_N = st.number_input(
     max_value=100,
     value=20
 )
-
 
 
 tags = tagsSQL.copy()
