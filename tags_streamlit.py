@@ -2,24 +2,21 @@ import pandas as pd
 import regex as re
 import streamlit as st
 import itertools
-<<<<<<< HEAD
 import plotly.express as px
 from collections import Counter
 
 countries = pd.read_csv("countries.gzip",compression='gzip')
 tagsSQL = pd.read_csv("tagsSQL.gzip",compression='gzip')
-=======
+
 import pickle
 from collections import Counter
 
-<<<<<<< HEAD
-countries = pd.read_csv("countries.csv")
-tagsSQL = pd.read_csv("tagsSQL.csv")
->>>>>>> parent of a7d92cd (csv files)
-=======
+
+countries = pd.read_csv("countries.gzip",compression='gzip')
+tagsSQL = pd.read_csv("tagsSQL.gzip",compression='gzip')
+
 countries = pickle.load(open('countries.pickle','rb'))
 tagsSQL = pickle.load(open("tagsSQL.pickle","rb"))
->>>>>>> parent of 12675aa (add streamlit)
 
 def country_transform(raw):
     global countries
@@ -42,7 +39,6 @@ TOP_N = st.number_input(
     max_value=100,
     value=20
 )
-
 
 
 tags = tagsSQL.copy()
